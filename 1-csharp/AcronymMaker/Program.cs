@@ -10,7 +10,7 @@ namespace AcronymMaker
 			string input = Console.ReadLine();
 
 			var acronym = new System.Text.StringBuilder();
-			while(input != null)
+			while(input.CompareTo("") != 0)
 			{
 				Console.WriteLine(input);
 				//get the character a postition 0
@@ -24,7 +24,7 @@ namespace AcronymMaker
 				{
 					// " " was not found in the string and we are at the end
 					// so set the input to null, so we can break out of the loop
-					input = null;
+					input = "";
 				}
 				else
 				{
