@@ -21,21 +21,27 @@ namespace classes
 				return balance;
 			} 
 		}
+		private readonly decimal minimumBalance;
 
 		private static int accountNumberSeed = 1234567890;
 
 		private List<Transaction> allTransactions = new List<Transaction>();
 
 		//constructor
-		public BankAccount(string name, decimal initialBalance)
+		public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
 		{
 			this.Owner = name;
 			this.Number = accountNumberSeed.ToString();
 			accountNumberSeed++;
 
+			this.minimumBalance = minimumBalance;
+
 			//use the initialBalance as a deposit and add transaction
-			MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
+			if(initialBalance > 0)
+				MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
 		}
+
+		public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0) { }
 
 		//methods
 		public void MakeDeposit(decimal amount, DateTime date, string note)
@@ -54,13 +60,24 @@ namespace classes
 			{
 				throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive.");
 			}
-			if(Balance - amount < 0)
-			{
-				throw new InvalidOperationException("Insufficent Funds for this withdrawal.");
-			}
-			Transaction withdrawal = new Transaction(-amount, date, note);
+			var overdraftTransaction = CheckWithdrawalLimit(Balance - amount < minimumBalance);
+			var withdrawal = new Transaction(-amount, date, note);
 			allTransactions.Add(withdrawal);
+			if(overdraftTransaction != null)
+				allTransactions.Add(overdraftTransaction);
 
+		}
+
+		protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
+		{
+			if(isOverdrawn)
+			{
+				throw new InvalidOperationException("Insufficient Funds For This Withdrawal.");
+			}
+			else
+			{
+				return default;
+			}
 		}
 
 		public string GetAccountHistory()
@@ -78,5 +95,7 @@ namespace classes
 
 			return report.ToString();
 		}
+
+		public virtual void PerformMonthEndTransactions() {}
     }
 }
