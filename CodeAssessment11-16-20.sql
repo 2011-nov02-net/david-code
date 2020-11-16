@@ -71,5 +71,4 @@ WHERE p.Name = 'iPhone'
 
 -- Increase price of iPhone to $250
 
-UPDATE Company.Product SET Price = 250.00 WHERE
-	
+UPDATE Company.Product SET Price = 250.00 WHERE Name = 'iPhone'
