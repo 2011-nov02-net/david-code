@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperSissors.ConsoleApp", "RockPaperSissors.ConsoleApp\RockPaperSissors.ConsoleApp.csproj", "{FEB5445D-1232-48B2-A53A-AD07A1C9EB7D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{102EA17E-A305-49AA-B95D-A56E04A05B9A} = {102EA17E-A305-49AA-B95D-A56E04A05B9A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperSissors.Library", "RockPaperSissors.Library\RockPaperSissors.Library.csproj", "{102EA17E-A305-49AA-B95D-A56E04A05B9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEB5445D-1232-48B2-A53A-AD07A1C9EB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB5445D-1232-48B2-A53A-AD07A1C9EB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB5445D-1232-48B2-A53A-AD07A1C9EB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB5445D-1232-48B2-A53A-AD07A1C9EB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102EA17E-A305-49AA-B95D-A56E04A05B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102EA17E-A305-49AA-B95D-A56E04A05B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102EA17E-A305-49AA-B95D-A56E04A05B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102EA17E-A305-49AA-B95D-A56E04A05B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60D61EB4-AD55-41B7-8830-76C8A096EF61}
+	EndGlobalSection
+EndGlobal
