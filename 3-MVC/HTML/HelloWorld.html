@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello World</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div>
+			<!--Comment-->
+			<span>
+				<p>This is my first paragraph written in HTML</p>
+			</span>
+			<span>
+				<p>Link to <a href="www.google.com">Google</a></p>
+			</span>
+
+			<!--Tables-->
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Alice</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Bob</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Charles</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!--Forms-->
+			<!--Notice when the inputs are in the same form will make them inline-->
+			<!--Must use <br> to force line breaks or use css-->
+			<form>
+				<!--email and password-->
+				<label for="email-input">Email</label>
+				<input type="email" name="email-input" /> <!--Self Closing-->
+				<label for="password">Password</label>
+				<!--Password inputs are masked, but not encrypted-->
+				<input type="password" name="password" /> <!--Self Closing-->
+				<input type="submit"/>
+			</form>
+			<!--Form for radio buttons-->
+			<form>
+				SELECT GENDER
+				<br>
+				<input type="radio" name="gender" id="male">
+				<label for="male">Male</label>
+				<input type="radio" name="gender" id="female">
+				<label for="female">Female</label>
+			</form>
+			<!--Copied from notes-->
+			<!--Checkbox input-->
+			<form> 
+				<b>SELECT SUBJECTS</b> 
+				<br> 
+				<input type="checkbox" name="subject" id="math" /> 
+				<label for="math">Math</label> 
+				<input type="checkbox" name="subject" id="science" /> 
+				<label for="sceince">Science</label> 
+				<input type="checkbox" name="subject" id="english" /> 
+				<label for="english">English</label> 
+			</form> 
+			<!--File selection-->
+			<form>
+				<label for="fileselect">Upload: </label>
+				<input type="file">
+				<input type="reset" value="Reset">
+			</form>
+			<!--Text boxes do things differently-->
+			<!--Gives initial size, but allows for resizing by the user-->
+			<form>
+				<label for="Description">Description:</label>
+				<textarea rows="5" cols="5" name="Description" id="Description"></textarea>
+			</form>
+			<!-- Select boxes, ie drop down menus -->
+			<!-- copied from notes -->
+			<form> 
+				<label for="country">Country:</label> 
+				<select name="country" id="country"> 
+					<option value="United States">United States</option> 
+					<option value="Canada">Canada</option> 
+					<option value="Mexico">Mexico</option> 
+				</select> 
+			</form> 
+			<!-- Reset button, See example up on File Selection -->
+			<!-- Submit button, see example up on email and password input -->
+
+			<!-- HTML 5 Stuff -->
+			<p>I went TajMahal for this summer</p>
+
+			<aside>
+			<h4>Taj Mahal</h4>
+			<p>The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra.</p>
+			</aside>
+		</div>
+	</body>
+</html>
