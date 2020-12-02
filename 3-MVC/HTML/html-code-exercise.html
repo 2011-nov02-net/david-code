@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML-Code-Exercise</title>
+	<style>
+		table {
+			border: 1px solid black;
+		}
+		th,td {
+			border: 1px solid black;
+		}
+		
+		#formgender {
+			border: 1px solid black;
+			width: 10%;
+		}
+	</style>
+</head>
+<body>
+	<img src="https://images.unsplash.com/photo-1598100931767-979cdc7b0175?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=200">
+	<h1>About</h1>
+	<div>
+		<p>Some text about the website</p>
+		<br>
+		<br>
+	</div>
+	<div>
+		<h2>Our Locations</h2>
+		<ul>
+			<li>USA</li>
+				<ul>
+					<li><a href="#">New York</a></li>
+					<li><a href="#">Columbus</a></li>
+					<li><a href="#">Austin</a></li>
+					<li><a href="#">Philly</a></li>
+				</ul>
+			<li>World</li>
+				<ul>
+					<li><a href="#">Ottawa</a></li>
+					<li><a href="#">Sydney</a></li>
+				</ul>
+		</ul>
+	</div>
+	<div>
+		<h2>Upcoming Classes</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Location</th>
+					<th>Topic</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>New York</td>
+					<td>JavaScript & jQuery</td>
+				</tr>
+				<tr>
+					<td>San Francisco</td>
+					<td>HTML & CSS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<h2>Sign Up!</h2>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" name="name">
+			<br>
+			<label for="email">Email:</label>
+			<input type="email" name="email">
+			<br>
+			<label for="locaton">Location:</label>
+			<select name="location">
+				<option value="New York">New York</option>
+				<option value="San Francisco">San Francisco</option>
+			</select>
+			<br>
+			<fieldset>
+				<legend for="gender">Gender: </legend>
+				<label for="female">Female</label>
+				<input type="radio" name="gender" id="female">
+				<label for="male">Male</label>
+				<input type="radio" name="gender" id="male">
+			</fieldset>
+			<br>
+			<label for="Experience">Experience:</label><br>
+			<textarea rows="7" cols="75" name="Experience" id="Experience"></textarea>
+			<br>
+			<button type="submit">Sign Up</button>
+		</form>
+	</div>
+	<br>
+	<footer>
+		<p>
+			<a href="www.twitter.com">Twitter</a>
+			|
+			<a href="www.facebook.com">Facebook</a>
+			|
+			<a href="www.flickr.com">Flickr</a>
+		</p>
+	</footer>
+	
+</body>
+</html>

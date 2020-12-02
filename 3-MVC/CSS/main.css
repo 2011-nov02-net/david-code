@@ -1,0 +1,27 @@
+main {
+	border: 3px solid rgb(165, 42, 42);
+	background-color: rgb(255, 255, 224);
+	width: 25%;
+	padding: 5px;
+}
+
+#fox {
+	border: 5px solid rgb(255, 165, 0);
+	width: 300px;
+	height: 100px;
+	margin: 10px;
+}
+
+#foxdescription {
+	margin: 10px;
+	width: 300px;
+	height: 250px;
+	overflow-y: scroll;
+	border: 5px dashed rgb(255, 165, 0);
+	background-color: rgb(255, 255, 0);
+}
+
+.bu {
+	font-weight: bold;
+	text-decoration: underline;
+}
