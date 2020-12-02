@@ -3,8 +3,15 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+# trigger:
+# - main
 trigger:
-- main
+  branches:
+    include:
+      - master
+  paths:
+    include:
+    - 3-mvc/SimpleOrderApp
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -14,4 +21,5 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: dotnet build
+  workingDirectory: 3-mvc/SimpleOrderApp
